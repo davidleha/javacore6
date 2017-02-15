@@ -6,11 +6,11 @@ public class HomeWork34 {
         System.out.println("User " + user1.getName());
         System.out.println("Salary: " + user1.getSalary());
         System.out.println("Balance: " + user1.getBalance() + user1.getCurrency());
-        System.out.println("next month");
+        System.out.println("next month arived");
         user1.paySalary();
         user1.monthIncreaser(1);
         System.out.println("Balance: " + user1.getBalance() + user1.getCurrency());
-        System.out.println("withdraw 999$");
+        System.out.println("withdrawed 999$");
         user1.withdraw(999);
         System.out.println("Balance: " + user1.getBalance() + user1.getCurrency());
     }

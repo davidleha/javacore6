@@ -1,8 +1,5 @@
 package module3;
 
-/**
- * Created by leha on 14.02.17.
- */
 public class HomeWork32 {
     public static void main(String[] args) {
         Integer a = new Integer(5);

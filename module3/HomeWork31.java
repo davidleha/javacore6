@@ -2,27 +2,43 @@ package module3;
 
 public class HomeWork31 {
     public static void main(String[] args) {
-        Bird aloneTitmouse = new Bird();
-        aloneTitmouse.sing();
-        aloneTitmouse.walk();
-        aloneTitmouse.fly();
+        Bird bird1 = new Bird("Ch'punja");
+        bird1.sing();
+        bird1.walk();
+        bird1.fly();
+        Bird bird2 = new Bird();
+        bird2.sing();
+        bird2.walk();
+        bird2.fly();
     }
 }
 
 class Bird {
+    private final String actSing = "I am singing";
+    private final String actWalk = "I am walking";
+    private final String actFly = "I am flying";
+    private final String actIntro = "I am Bird";
+    private String name;
+
     public Bird() {
-        System.out.println("I am Bird");
+        this.name = "noname";
+        System.out.println(actIntro);
+    }
+
+    public Bird(String name) {
+        this.name = name;
+        System.out.println(actIntro + ", my name is " + this.name );
     }
 
     public void sing() {
-        System.out.println("I am singing");
+        System.out.println(actSing);
     }
 
     public void walk() {
-        System.out.println("I am walking");
+        System.out.println(actWalk);
     }
 
     public void fly() {
-        System.out.println("I am flying");
+        System.out.println(actFly);
     }
 }

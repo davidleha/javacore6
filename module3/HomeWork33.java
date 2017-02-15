@@ -18,7 +18,7 @@ public class HomeWork33 {
         students[4] = new CollegeStudent("Ханна", "Вошь", 2, new Course[] { course5, course4}, 25, "ПТУ-8", 5, 56789);
         students[5] = new SpecialStudent("Пупкин", new Course[] { course2, course3 } );
         students[6] = new SpecialStudent("Абрам", "Гитлер", 1, new Course[] { course1 }, 50, "ПТУ-8", 5, 12345);
-        students[7] = new SpecialStudent("Гад", "Ёлкин", 1, 1048576);
+        students[7] = new SpecialStudent(1048576);
     }
 }
 
@@ -46,6 +46,8 @@ class Student {
     private int group;
     protected Course[] coursesTaken;
     protected int age;
+
+    public Student() {}
 
     public Student(String firstName, String lastName, int group) {
         this.firstName = firstName;
@@ -104,6 +106,8 @@ class CollegeStudent extends Student {
     private int rating;
     private long id;
 
+    public CollegeStudent() { super(); }
+
     public CollegeStudent(String firstName, String lastName, int group) {
         super(firstName, lastName, group);
     }
@@ -159,8 +163,8 @@ class SpecialStudent extends CollegeStudent {
         super(lastName, coursesTaken);
     }
 
-    public SpecialStudent(String firstName, String lastName, int group, long secretKey) {
-        super(firstName, lastName, group);
+    public SpecialStudent(long secretKey) {
+        super();
         this.secretKey = secretKey;
     }
 
