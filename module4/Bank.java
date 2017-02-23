@@ -1,8 +1,5 @@
 package module4;
 
-/**
- * Created by leha on 23.02.17.
- */
 public abstract class Bank {
     abstract int getLimitOfWithdrawal();
     abstract int getLimitOfFunding();
