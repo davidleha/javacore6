@@ -17,17 +17,23 @@ public class Main {
             new User(2001, "Мотя Нафталин", 100, 30, "VW", 1300, bank3),
             new User(2001, "Песя Шлагбаум", 5500, 30, "VW", 1300, bank3),
         };
-        for (User u : users)
-            System.out.println(u);
-        for (User u : users) {
-            bs.fundUser(u, 100);
-            bs.paySalary(u);
-            bs.withdrawOfUser(u,1000);
-            bs.transferMoney(u, users[0], 100);
-        }
-        System.out.println();
-        for (User u : users)
-            System.out.println(u);
+        printUsers(users);
+        System.out.println("All users has funded their bank 100 currency");
+        for (User u : users) bs.fundUser(u, 100);
+        printUsers(users);
+        System.out.println("All users received salary");
+        for (User u : users) bs.paySalary(u);
+        printUsers(users);
+        System.out.println("All users withdrawed 1000 currency");
+        for (User u : users) bs.withdrawOfUser(u,1000);
+        printUsers(users);
+        System.out.println("First user recieved 100 identical currency from other users");
+        for (User u : users) bs.transferMoney(u, users[0], 100);
+        printUsers(users);
+    }
 
+    static void printUsers(User users[]) {
+        for (User u : users) System.out.println(u);
+        System.out.println();
     }
 }

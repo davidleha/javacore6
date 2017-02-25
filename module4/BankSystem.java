@@ -31,8 +31,9 @@ class BankSystemImpl implements BankSystem {
         Bank toBank = toUser.getBank();
         if (fromBank.getCurrency() != toBank.getCurrency()) return;
         if (amount > fromUser.getBalance()) return;
+        if (fromUser == toUser) return;
         fromUser.setBalance(fromUser.getBalance() - amount);
-        toUser.setBalance(toUser.getBalance() + amount - amount * (1 + (double)toBank.getCommission(amount) / 100));
+        toUser.setBalance(toUser.getBalance() + amount - amount * (double)toBank.getCommission(amount) / 100);
     }
     @Override
     public void paySalary(User user) {
