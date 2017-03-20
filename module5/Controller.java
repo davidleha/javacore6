@@ -70,7 +70,7 @@ public class Controller {
         System.out.println("--- DAO demonstration");
         System.out.println("sameRoomsDAO:");
         loadAllFromDAO(sameRoomsDAO);
-        module5.Main.printArray(auxArr);
+        module5.Main.printArray(auxArr, false);
 
         sameRoomsDAO.seekStart();
         int i = 0;
@@ -86,10 +86,10 @@ public class Controller {
         room.setCityName("Шепетівка");
         sameRoomsDAO.update(room);
         loadAllFromDAO(sameRoomsDAO);
-        module5.Main.printArray(auxArr);
+        module5.Main.printArray(auxArr, false);
         room = sameRoomsDAO.findById(1304);
         while (sameRoomsDAO.delete(room));
         loadAllFromDAO(sameRoomsDAO);
-        module5.Main.printArray(auxArr);
+        module5.Main.printArray(auxArr, false);
     }
 }
